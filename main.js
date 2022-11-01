@@ -1,6 +1,5 @@
 import './style.css'
 import * as THREE from '../node_modules/three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { LoadingManager } from 'three';
 
 const progressBar = document.getElementById('progress-bar');
