@@ -8,11 +8,9 @@ LoadingManager.onProgress = function(url, loaded, total){
 }
 
 const progressBarContainer = document.querySelector('.progress-bar-container');
-const mainElem = document.querySelector('.main');
 
 LoadingManager.onLoad = function () {
   progressBarContainer.style.visibility = 'hidden';
-  mainElem.style.display = 'grid';
 }
 
 const scene = new THREE.Scene();
