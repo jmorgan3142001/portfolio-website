@@ -1,4 +1,3 @@
-import '../style.css'
 import * as THREE from '../node_modules/three';
 import { LoadingManager } from '../node_modules/three';
 
@@ -13,6 +12,7 @@ const mainElem = document.querySelector('.main');
 
 LoadingManager.onLoad = function () {
   progressBarContainer.style.visibility = 'hidden';
+  mainElem.style.display = 'grid';
 }
 
 const scene = new THREE.Scene();
