@@ -1,17 +1,4 @@
 import * as THREE from 'three';
-import { LoadingManager } from 'three';
-
-const progressBar = document.getElementById('progress-bar');
-
-LoadingManager.onProgress = function(url, loaded, total){
-  progressBar.value = (loaded / total) * 100;
-}
-
-const progressBarContainer = document.querySelector('.progress-bar-container');
-
-LoadingManager.onLoad = function () {
-  progressBarContainer.style.visibility = 'hidden';
-}
 
 const scene = new THREE.Scene();
 
