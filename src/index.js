@@ -1,5 +1,5 @@
-import * as THREE from '../node_modules/three';
-import { LoadingManager } from '../node_modules/three';
+import * as THREE from 'three';
+import { LoadingManager } from 'three';
 
 const progressBar = document.getElementById('progress-bar');
 
