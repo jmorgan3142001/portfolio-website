@@ -1,4 +1,8 @@
 import * as THREE from 'three';
+import shipURL from '../ship-texture.jpg';
+import normalURL from '../normal.jpg';
+import jakeURL from '../Jake.jpg';
+import spaceURL from '../space.jpg';
 
 const scene = new THREE.Scene();
 
@@ -19,8 +23,8 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 
 camera.position.setZ(25);
 
-const torusTexture = new THREE.TextureLoader().load("ship-texture.jpg");
-const normalTexture = new THREE.TextureLoader().load("normal.jpg");
+const torusTexture = new THREE.TextureLoader().load(shipURL);
+const normalTexture = new THREE.TextureLoader().load(normalURL);
 const torusGeo = new THREE.TorusGeometry(10, 3, 16, 100);
 const torusGeoTwo = new THREE.TorusGeometry(20, 3, 16, 200);
 const torusMat = new THREE.MeshStandardMaterial({map: torusTexture, normalMap: normalTexture});
@@ -31,7 +35,7 @@ const sphereGeo = new THREE.SphereGeometry(10, 10, 10);
 const sphereOne = new THREE.Mesh(sphereGeo, torusMat);
 const sphereTwo = new THREE.Mesh(sphereGeo, torusMat);
 
-const cubeTexture = new THREE.TextureLoader().load('Jake.jpg');
+const cubeTexture = new THREE.TextureLoader().load(jakeURL);
 const boxGeo = new THREE.BoxGeometry(50, 50, 50);
 const boxMat = new THREE.MeshBasicMaterial({map: cubeTexture, transparent: true, opacity: 0});
 const cube = new THREE.Mesh(boxGeo, boxMat);
@@ -54,7 +58,7 @@ pointLight.position.y = 50
 scene.add(torus, torusTwo, cube, sphereOne, sphereTwo, ambientLight, pointLight);
 Array(10000).fill().forEach(addStars);
 
-const background = new THREE.TextureLoader().load('space.jpg');
+const background = new THREE.TextureLoader().load(spaceURL);
 scene.background = background;
 
 renderer.render(scene, camera);
